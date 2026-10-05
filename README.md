@@ -66,7 +66,9 @@ tampilkanSemuaStaf(): Melakukan perulangan (looping) pada seluruh isi daftarDokt
 2. Pengecekan Status Awal: Program memanggil fungsi tampilkanSemuaStaf() untuk mencetak keadaan awal ke layar, membuktikan bahwa daftar dokter dan perawat di dalam sistem masih kosong.
 3. Penambahan Data Pertama: Program membuat dan memasukkan satu objek Dokter (dr. Andi Setiawan) dan satu objek Perawat (Zahra Cahya) ke dalam array of objects milik rumah sakit menggunakan fungsi penambahan yang telah disediakan.
 4. Cetak Status Sementara: Program kembali memanggil fungsi tampilkanSemuaStaf() untuk memperlihatkan bahwa kedua data staf yang baru saja dimasukkan sudah berhasil tersimpan di dalam sistem.
+
 5.Penambahan Data Lanjutan: Program mensimulasikan penambahan data lebih lanjut dengan memasukkan lagi satu objek Dokter baru (dr. Wowo Dodo) dan satu objek Perawat baru (Priyanka) ke dalam sistem.
+
 6.Cetak Status Akhir: Program memanggil fungsi tampilkanSemuaStaf() untuk yang terakhir kalinya guna mencetak keseluruhan daftar staf yang kini berisi dua dokter dan dua perawat secara berurutan dan rapi, setelah itu program selesai dieksekusi.
 
 ## DOKUMENTASI 
