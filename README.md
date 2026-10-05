@@ -17,7 +17,9 @@ Kelas TenagaMedis berperan sebagai kelas induk yang menjadi fondasi dasar bagi e
 
 Atribut:
 id (String): Menyimpan nomor identitas unik pegawai (protected).
+
 nama (String): Menyimpan nama lengkap staf medis (protected).
+
 gajiPokok (Double): Menyimpan besaran gaji dasar staf (protected).
 
 Method:
