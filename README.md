@@ -16,15 +16,13 @@ Saya Muhammad Syafiq A dengan NIM 2500254 mengerjakan TP 3 dalam mata kuliah Des
 Kelas TenagaMedis berperan sebagai kelas induk yang menjadi fondasi dasar bagi entitas staf medis lainnya. Kelas ini menyimpan data umum yang pasti dimiliki oleh semua staf, sehingga data tersebut tidak perlu ditulis berulang kali pada kelas lain. Agar data ini dapat diturunkan dan diakses langsung oleh kelas anak-anaknya, atribut diatur menggunakan hak akses protected.
 
 Atribut:
-id (String): Menyimpan nomor identitas unik pegawai (protected).
-
-nama (String): Menyimpan nama lengkap staf medis (protected).
-
+id (String): Menyimpan nomor identitas unik pegawai (protected), 
+nama (String): Menyimpan nama lengkap staf medis (protected), 
 gajiPokok (Double): Menyimpan besaran gaji dasar staf (protected).
 
 Method:
-Constructor: Digunakan untuk memberikan nilai awal pada id, nama, dan gajiPokok saat objek staf dibuat.
-Getter & Setter: Rangkaian fungsi untuk membaca dan mengubah nilai atribut secara aman dari luar kelas.
+Constructor: Digunakan untuk memberikan nilai awal pada id, nama, dan gajiPokok saat objek staf dibuat, 
+Getter & Setter: Rangkaian fungsi untuk membaca dan mengubah nilai atribut secara aman dari luar kela, 
 tampilkanInfo(): Berfungsi mencetak teks berisi ID, Nama, dan Gaji Pokok ke layar.
 
 2. Class Dokter (Kelas Anak / Child Class)
@@ -34,8 +32,8 @@ Atribut:
 spesialisasi (String): Menyimpan bidang keahlian spesifik dokter, seperti "Spesialis Anak" (private).
 
 Method:
-Constructor: Menerima data awal staf, meneruskan parameter dasar ke constructor TenagaMedis, lalu mengisi atribut spesialisasi.
-Getter & Setter: Fungsi getSpesialisasi() dan setSpesialisasi() untuk mengambil atau memodifikasi data keahlian.
+Constructor: Menerima data awal staf, meneruskan parameter dasar ke constructor TenagaMedis, lalu mengisi atribut spesialisasi, 
+Getter & Setter: Fungsi getSpesialisasi() dan setSpesialisasi() untuk mengambil atau memodifikasi data keahlian,
 tampilkanInfo(): Melakukan override fungsi dari induknya agar fungsi ini ikut menambahkan cetakan informasi spesialisasi di akhir baris output.
 
 3. Class Perawat (Kelas Anak / Child Class)
@@ -45,23 +43,23 @@ Atribut:
 shiftKerja (String): Menyimpan jadwal operasional perawat, seperti "Pagi" atau "Malam" (private).
 
 Method:
-Constructor: Menerima data awal, meneruskan parameter dasar ke constructor TenagaMedis, lalu mengisi nilai shiftKerja.
-Getter & Setter: Fungsi getShiftKerja() dan setShiftKerja() untuk memanipulasi data jadwal shift.
+Constructor: Menerima data awal, meneruskan parameter dasar ke constructor TenagaMedis, lalu mengisi nilai shiftKerja,
+Getter & Setter: Fungsi getShiftKerja() dan setShiftKerja() untuk memanipulasi data jadwal shift,
 tampilkanInfo(): Melakukan override fungsi dari induknya agar ikut mencetak informasi shift kerja perawat di akhir baris output.
 
 4. Class RumahSakit (Kelas Wadah / Composite Class)
 Kelas RumahSakit bertindak sebagai kelas wadah (composite) yang mewakili sistem operasional manajemen utama dalam program. Kelas ini menerapkan konsep Array of Objects dengan memanfaatkan struktur data (seperti list atau vector) untuk menampung, mengelola, dan menampilkan seluruh kumpulan objek Dokter dan Perawat yang bekerja di rumah sakit tersebut.
 
 Atribut:
-namaRumahSakit (String): Menyimpan nama institusi rumah sakit (private).
-daftarDokter (Array/Vector/List of Dokter): Struktur data koleksi yang bertugas menampung banyak objek dokter sekaligus di dalam memori (private).
+namaRumahSakit (String): Menyimpan nama institusi rumah sakit (private),
+daftarDokter (Array/Vector/List of Dokter): Struktur data koleksi yang bertugas menampung banyak objek dokter sekaligus di dalam memori (private),
 daftarPerawat (Array/Vector/List of Perawat): Struktur data koleksi yang bertugas menampung banyak objek perawat sekaligus di dalam memori (private).
 
 Method:
-Constructor & Getter/Setter: Untuk inisialisasi dan modifikasi nama rumah sakit.
-tambahDokter(): Menerima objek dokter baru dan memasukkannya ke dalam atribut koleksi daftarDokter.
-tambahPerawat(): Menerima objek perawat baru dan memasukkannya ke dalam atribut koleksi daftarPerawat.
-tampilkanSemuaStaf(): Melakukan perulangan (looping) pada seluruh isi daftarDokter dan daftarPerawat, lalu memanggil secara otomatis method tampilkanInfo()   milik setiap objek di dalamnya.
+Constructor & Getter/Setter: Untuk inisialisasi dan modifikasi nama rumah sakit,
+tambahDokter(): Menerima objek dokter baru dan memasukkannya ke dalam atribut koleksi daftarDokter,
+tambahPerawat(): Menerima objek perawat baru dan memasukkannya ke dalam atribut koleksi daftarPerawat,
+tampilkanSemuaStaf(): Melakukan perulangan (looping) pada seluruh isi daftarDokter dan daftarPerawat lalu memanggil secara otomatis method tampilkanInfo()   milik setiap objek di dalamnya.
 
 ## ALUR PROGRAM 
 1. Inisialisasi Sistem: Program dimulai (pada fungsi main) dengan membuat satu objek dari kelas RumahSakit yang diberi nama "RS Harapan Sehat" sebagai wadah utama.
