@@ -14,6 +14,7 @@ Saya Muhammad Syafiq A dengan NIM 2500254 mengerjakan TP 3 dalam mata kuliah Des
 ## PENJELASAN ATRIBUT DAN METHOD SETIAP CLASS
 1. Class TenagaMedis (Kelas Induk / Parent Class)
 Kelas TenagaMedis berperan sebagai kelas induk yang menjadi fondasi dasar bagi entitas staf medis lainnya. Kelas ini menyimpan data umum yang pasti dimiliki oleh semua staf, sehingga data tersebut tidak perlu ditulis berulang kali pada kelas lain. Agar data ini dapat diturunkan dan diakses langsung oleh kelas anak-anaknya, atribut diatur menggunakan hak akses protected.
+
 Atribut:
 id (String): Menyimpan nomor identitas unik pegawai (protected).
 nama (String): Menyimpan nama lengkap staf medis (protected).
@@ -25,6 +26,7 @@ tampilkanInfo(): Berfungsi mencetak teks berisi ID, Nama, dan Gaji Pokok ke laya
 
 2. Class Dokter (Kelas Anak / Child Class)
 Kelas Dokter adalah kelas anak yang mewarisi secara langsung seluruh karakteristik dari TenagaMedis. Melalui pewarisan ini, objek dokter secara otomatis memiliki atribut ID, nama, dan gaji pokok, namun dengan tambahan atribut khusus untuk menyimpan bidang keahliannya. Kelas ini juga menimpa (override) metode bawaan induknya agar cetakan informasinya lebih spesifik.
+
 Atribut:
 spesialisasi (String): Menyimpan bidang keahlian spesifik dokter, seperti "Spesialis Anak" (private).
 Method:
@@ -34,6 +36,7 @@ tampilkanInfo(): Melakukan override fungsi dari induknya agar fungsi ini ikut me
 
 3. Class Perawat (Kelas Anak / Child Class)
 Sama halnya dengan kelas dokter, kelas Perawat bertindak sebagai kelas anak yang diturunkan dari TenagaMedis. Kelas ini mewarisi atribut umum staf medis namun menambahkan atribut eksklusif miliknya sendiri yang berkaitan dengan jadwal operasional. Metode tampilannya juga disesuaikan untuk memunculkan informasi spesifik tersebut.
+
 Atribut:
 shiftKerja (String): Menyimpan jadwal operasional perawat, seperti "Pagi" atau "Malam" (private).
 Method:
@@ -43,6 +46,7 @@ tampilkanInfo(): Melakukan override fungsi dari induknya agar ikut mencetak info
 
 4. Class RumahSakit (Kelas Wadah / Composite Class)
 Kelas RumahSakit bertindak sebagai kelas wadah (composite) yang mewakili sistem operasional manajemen utama dalam program. Kelas ini menerapkan konsep Array of Objects dengan memanfaatkan struktur data (seperti list atau vector) untuk menampung, mengelola, dan menampilkan seluruh kumpulan objek Dokter dan Perawat yang bekerja di rumah sakit tersebut.
+
 Atribut:
 namaRumahSakit (String): Menyimpan nama institusi rumah sakit (private).
 daftarDokter (Array/Vector/List of Dokter): Struktur data koleksi yang bertugas menampung banyak objek dokter sekaligus di dalam memori (private).
@@ -63,8 +67,13 @@ tampilkanSemuaStaf(): Melakukan perulangan (looping) pada seluruh isi daftarDokt
 
 ## DOKUMENTASI 
 
+CPP
 <img width="1258" height="837" alt="cpp" src="https://github.com/user-attachments/assets/f72892d2-37e4-4513-9f0a-82650f756b88" />
+
+PYTHON
 <img width="1208" height="882" alt="hasil run python" src="https://github.com/user-attachments/assets/a711fc0f-d866-470f-8149-2a23535568aa" />
+
+JAVA
 <img width="1202" height="876" alt="java" src="https://github.com/user-attachments/assets/d6773cd9-d7e5-49dc-bf2e-23bc137dd67c" />
 
 
